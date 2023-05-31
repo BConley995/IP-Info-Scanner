@@ -304,12 +304,12 @@ Function GatherInfo {
         Global
         AIP
     }
-    #ITM (Version 1)
+    #Indigo (Version 1)
     elseif (Test-Path -Path "C:\Program Files*\jDummy\") {
         Global
         IIP
     }
-    #ITM (Version 2)
+    #Indigo (Version 2)
     elseif (Test-Path -Path "C:\inject\Apples.add") {
         Global
         IIP

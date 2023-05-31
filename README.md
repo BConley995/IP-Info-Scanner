@@ -1,32 +1,54 @@
-# PowerShell Script for Configuration Maintenance
+# Software Information
 
-This repository contains a PowerShell script that is used for maintaining configuration files on a Windows computer.
+This repository contains a PowerShell script for gathering information about the software running on a computer.
 
-## Functionality
+## Script Description
 
-The script performs checks on several XML configuration files and a `.DAT` file. It ensures that these files contain certain expected values. If these values are missing, the script copies predefined configuration files from a directory `C:\Windows\BCD\Fix\`. This is to ensure that the system or application works as expected with the correct configurations.
+The PowerShell script is designed to identify different software based on specific files or directories present on the system. It retrieves various information such as IP addresses, server details, DNS servers, MAC address, and more, depending on the software identity.
 
-The script is specifically tailored to work with a particular application that stores its configuration files in the `C:\Program Files*\jDummy\I*\Config\` and `C:\WebA\` directories.
+## Usage
 
-## How to Run
+To use the script, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Open a PowerShell window.
-3. Navigate to the directory containing the script.
-4. Run the script using the command `.\script_name.ps1`, replacing `script_name.ps1` with the actual script name.
+1. Clone the repository or download the PowerShell script.
 
-## Logging
+2. Open PowerShell or any compatible PowerShell environment.
 
-The script generates logs that are stored in `C:\Windows\BCD\Fix\Logs\`. It logs the start time, end time, and any discrepancies it finds in the configuration files.
+3. Navigate to the directory where the script is located.
+
+4. Run the script using the following command:
+```shell
+PowerShell -ExecutionPolicy Bypass -File SoftwareInfo.ps1
+```
+
+Note: Ensure that you have appropriate permissions to execute PowerShell scripts on your system.
+
+5. The script will identify the software running on your computer and gather relevant information. The gathered information will be displayed in the console.
+
+## Software Identities
+
+The script can identify the following software:
+
+- **Detached** (Version 1 and Version 2)
+- **Helicopter** (Version 1 and Version 2)
+- **BC** (Version 1 and Version 2)
+- **Indigo** (Version 1 and Version 2)
+- **Elephant**
+
+For each software identity, specific information will be gathered and displayed.
+
+## Requirements
+
+- PowerShell (compatible with PowerShell 5.1 or later)
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This script is licensed under the [MIT License](LICENSE).
 
-## Contribution
+## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## Disclaimer
 
-This script is provided as-is. Please use it at your own risk.
+The script provided here is for informational purposes only. Use it at your own risk. The author is not responsible for any damages or issues caused by using this script.
